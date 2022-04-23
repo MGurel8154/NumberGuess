@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+<body class="grid h-screen w-screen place-content-center">
+    <script src="sayitahmin.js" type="text/Javascript">
+    </script>
+    
+    <p class="text-center" id="counter">Remaining Attempt: 10</p>
+    <div class="flex flex-col space-y-3">    
+        <input class="border-gray-500 px-3 py-1 border-2"  name="guess" id="text" placeholder="Bir sayı girin">
+        <button class="bg-gray-200 border-black border-2 px-3 py-1 hover-cursor-pointer" onclick="detector()" id="btn1" class="">Try</button>
+        <button class="bg-gray-200 border-black border-2 px-3 py-1 hover-cursor-pointer" onclick="randomnumber()" id="create">Create New Number</button>
+    </div>
+    
+    <p class="text-center" id="answer"> </p>
+    <p id="realthing"></p>
+
+   
+   <script>
+        var input = document.getElementById("text");
+        input.addEventListener("keyup", function(event) {
+        if (event.keyCode == 13) {
+         event.preventDefault();
+         document.getElementById("btn1").click();
+        }
+      });
+    </script>
+
+</body>
+</html>
